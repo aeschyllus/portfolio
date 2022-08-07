@@ -74,7 +74,10 @@ export default function Home() {
         <h2 className="text-2xl font-bold tracking-widest">/tools</h2>
         <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
           {tools.map((tool) => (
-            <div className="border border-neutral-500 p-4 space-y-4 grid place-items-center">
+            <div
+              key={tool.id}
+              className="border border-neutral-500 p-4 space-y-4 grid place-items-center"
+            >
               <p className="text-4xl">{tool.icon}</p>
               <p className="text-center">{tool.title}</p>
             </div>

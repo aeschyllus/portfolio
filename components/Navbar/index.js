@@ -33,7 +33,7 @@ export default function Navbar() {
             _ML
           </h1>
 
-          <button class="md:hidden" onClick={() => setNav(!nav)}>
+          <button className="md:hidden" onClick={() => setNav(!nav)}>
             <BiMenu className="text-2xl" />
           </button>
 
