@@ -1,3 +1,4 @@
+import { BsGithub, BsLinkedin } from "react-icons/bs";
 import {
   FaCss3Alt,
   FaGitAlt,
@@ -18,6 +19,14 @@ import Container from "../components/Container";
 import Spacer from "../components/Spacer";
 
 export default function Home() {
+  const profileLinks = [
+    {
+      id: 1,
+      icon: <BsLinkedin />,
+      path: "https://www.linkedin.com/in/mark-lapada-44647a1b1/",
+    },
+    { id: 2, icon: <BsGithub />, path: "https://github.com/aeschyllus" },
+  ];
   const tools = [
     { id: 1, title: "Neovim", icon: <SiNeovim /> },
     { id: 2, title: "Git", icon: <FaGitAlt /> },
@@ -48,6 +57,17 @@ export default function Home() {
           <p>Hi, my name is</p>
           <h1 className="font-bold text-3xl">Mark Anthony Lapada</h1>
           <p className="text-right">Fullstack Developer</p>
+          <div className="flex items-center justify-end space-x-4 mt-3">
+            {profileLinks.map((profileLink) => (
+              <a
+                key={profileLink.id}
+                href={profileLink.path}
+                className="text-3xl"
+              >
+                {profileLink.icon}
+              </a>
+            ))}
+          </div>
         </div>
       </section>
 
