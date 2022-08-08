@@ -47,9 +47,9 @@ export default function Navbar() {
               Home
             </button>
             {navLinks.map((navLink) => (
-              <li key={navLink.id} onClick={() => setNav(false)}>
-                <a href={navLink.path}>{navLink.title}</a>
-              </li>
+              <a key={navLink.id} href={navLink.path} className="block">
+                <li onClick={() => setNav(false)}>{navLink.title}</li>
+              </a>
             ))}
           </ul>
         </div>
@@ -59,7 +59,6 @@ export default function Navbar() {
         className={
           nav ? "transition duration-300 bg-black/70 h-screen md:hidden" : ""
         }
-        onClick={() => setNav(false)}
       >
         <div
           className={
@@ -79,13 +78,13 @@ export default function Navbar() {
                 Home
               </button>
               {navLinks.map((navLink) => (
-                <li key={navLink.id} onClick={() => setNav(false)}>
-                  <a href={navLink.path}>{navLink.title}</a>
-                </li>
+                <a key={navLink.id} href={navLink.path} className="block">
+                  <li onClick={() => setNav(false)}>{navLink.title}</li>
+                </a>
               ))}
             </ul>
 
-            <section className="space-y-3">
+            <section className="space-y-3 pb-28">
               <h2>Connect with me</h2>
               <div className="flex space-x-4">
                 {profileLinks.map((profileLink) => (
@@ -98,7 +97,6 @@ export default function Navbar() {
                   </a>
                 ))}
               </div>
-              <Spacer />
             </section>
           </div>
         </div>
