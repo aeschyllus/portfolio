@@ -52,7 +52,8 @@ export default function Home() {
   return (
     <Container>
       <Spacer />
-      <section className="w-full h-[30%] flex items-center justify-center">
+      <Spacer />
+      <section className="w-full flex items-center justify-center">
         <div>
           <p>Hi, my name is</p>
           <h1 className="font-bold text-3xl">Mark Anthony Lapada</h1>
@@ -96,7 +97,7 @@ export default function Home() {
           {tools.map((tool) => (
             <div
               key={tool.id}
-              className="border border-neutral-500 p-4 space-y-4 grid place-items-center"
+              className="border border-neutral-500 dark:border-amber-50 p-4 space-y-4 grid place-items-center"
             >
               <p className="text-4xl">{tool.icon}</p>
               <p className="text-center">{tool.title}</p>
@@ -113,7 +114,7 @@ export default function Home() {
             <a
               key={project.id}
               href={project.link}
-              className="flex items-center justify-around border border-neutral-500 p-4"
+              className="flex items-center justify-around border border-neutral-500 dark:border-amber-50 p-4"
             >
               <FaVolleyballBall className="text-5xl" />
               <div>

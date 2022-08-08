@@ -1,9 +1,17 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { BiMenu } from "react-icons/bi";
-import { BsGithub, BsLinkedin } from "react-icons/bs";
-import Spacer from "../Spacer";
+import {
+  BsGithub,
+  BsLinkedin,
+  BsMoon,
+  BsSun,
+  BsToggleOff,
+  BsToggleOn,
+} from "react-icons/bs";
+import DarkModeContext from "../../contexts/darkMode";
 
 export default function Navbar() {
+  const { dark, setDark } = useContext(DarkModeContext);
   const [nav, setNav] = useState(false);
   const navLinks = [
     { id: 1, title: "About", path: "#about" },
@@ -20,8 +28,8 @@ export default function Navbar() {
   ];
 
   return (
-    <nav className="fixed w-full lg:grid place-items-center">
-      <div className="lg:w-[70%] bg-amber-50 border-b border-neutral-500 h-14 py-3 px-5">
+    <nav className="transition duration-300 ease-in fixed w-full lg:grid place-items-center dark:text-neutral-200">
+      <div className="transition duration-300 ease-in lg:w-[70%] bg-amber-50 dark:bg-neutral-800 border-b border-neutral-500 dark:border-neutral-200 h-14 py-3 px-5">
         <div className="flex items-center justify-between h-full">
           <h1
             className="uppercase tracking-widest font-bold text-xl cursor-pointer"
@@ -46,11 +54,20 @@ export default function Navbar() {
             >
               Home
             </button>
+
             {navLinks.map((navLink) => (
               <a key={navLink.id} href={navLink.path} className="block">
                 <li onClick={() => setNav(false)}>{navLink.title}</li>
               </a>
             ))}
+
+            <div className="flex items-center space-x-3">
+              <BsSun />
+              <button className="text-xl" onClick={() => setDark(!dark)}>
+                {dark ? <BsToggleOn /> : <BsToggleOff />}
+              </button>
+              <BsMoon />
+            </div>
           </ul>
         </div>
       </div>
@@ -63,8 +80,8 @@ export default function Navbar() {
         <div
           className={
             nav
-              ? "fixed bg-amber-50 h-screen w-[65%] left-0 ease-in duration-300"
-              : "fixed bg-amber-50 h-screen w-[65%] left-[-100%] ease-in duration-300"
+              ? "fixed bg-amber-50 dark:bg-neutral-800 dark:text-neutral-200 h-screen w-[65%] left-0 ease-in duration-300"
+              : "fixed bg-amber-50 dark:bg-neutral-800 dark:text-neutral-200 h-screen w-[65%] left-[-100%] ease-in duration-300"
           }
         >
           <div className="p-5 flex flex-col justify-between h-full">
@@ -82,6 +99,13 @@ export default function Navbar() {
                   <li onClick={() => setNav(false)}>{navLink.title}</li>
                 </a>
               ))}
+              <div className="flex items-center space-x-3">
+                <BsSun />
+                <button className="text-xl" onClick={() => setDark(!dark)}>
+                  {dark ? <BsToggleOn /> : <BsToggleOff />}
+                </button>
+                <BsMoon />
+              </div>
             </ul>
 
             <section className="space-y-3 pb-28">
