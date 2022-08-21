@@ -5,6 +5,7 @@ import {
   FaLaravel,
   FaVolleyballBall,
 } from "react-icons/fa";
+import { FiShoppingBag } from "react-icons/fi";
 import { GrReactjs } from "react-icons/gr";
 import {
   SiDjango,
@@ -46,6 +47,14 @@ export default function Home() {
       title: "Haikyuu!!",
       description: "An anime themed web app",
       link: "https://haikyu.netlify.app/",
+      icon: <FaVolleyballBall className="text-5xl" />,
+    },
+    {
+      id: 2,
+      title: "Puti",
+      description: "E-commerce for apparel",
+      link: "https://puti.vercel.app/",
+      icon: <FiShoppingBag className="text-5xl" />,
     },
   ];
 
@@ -116,7 +125,7 @@ export default function Home() {
               href={project.link}
               className="flex items-center justify-around border border-neutral-500 dark:border-amber-50 p-4"
             >
-              <FaVolleyballBall className="text-5xl" />
+              {project.icon}
               <div>
                 <p className="font-bold text-xl">{project.title}</p>
                 <small>{project.description}</small>
