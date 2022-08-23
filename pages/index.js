@@ -7,6 +7,7 @@ import {
 } from "react-icons/fa";
 import { FiShoppingBag } from "react-icons/fi";
 import { GrReactjs } from "react-icons/gr";
+import { IoFlowerOutline } from "react-icons/io5";
 import {
   SiDjango,
   SiHtml5,
@@ -15,6 +16,7 @@ import {
   SiNextdotjs,
   SiRedux,
   SiReduxsaga,
+  SiTailwindcss,
 } from "react-icons/si";
 import Container from "../components/Container";
 import Spacer from "../components/Spacer";
@@ -29,17 +31,18 @@ export default function Home() {
     { id: 2, icon: <BsGithub />, path: "https://github.com/aeschyllus" },
   ];
   const tools = [
-    { id: 1, title: "Neovim", icon: <SiNeovim /> },
-    { id: 2, title: "Git", icon: <FaGitAlt /> },
-    { id: 3, title: "HTML", icon: <SiHtml5 /> },
-    { id: 4, title: "CSS", icon: <FaCss3Alt /> },
+    { id: 1, title: "CSS", icon: <FaCss3Alt /> },
+    { id: 2, title: "Django", icon: <SiDjango /> },
+    { id: 3, title: "Git", icon: <FaGitAlt /> },
+    { id: 4, title: "HTML", icon: <SiHtml5 /> },
     { id: 5, title: "Javascript", icon: <SiJavascript /> },
-    { id: 6, title: "React", icon: <GrReactjs /> },
-    { id: 7, title: "Next.js", icon: <SiNextdotjs /> },
-    { id: 8, title: "Laravel", icon: <FaLaravel /> },
-    { id: 9, title: "Django", icon: <SiDjango /> },
-    { id: 10, title: "Redux", icon: <SiRedux /> },
-    { id: 11, title: "Redux-Saga", icon: <SiReduxsaga /> },
+    { id: 6, title: "Laravel", icon: <FaLaravel /> },
+    { id: 7, title: "Neovim", icon: <SiNeovim /> },
+    { id: 8, title: "Next.js", icon: <SiNextdotjs /> },
+    { id: 9, title: "React", icon: <GrReactjs /> },
+    { id: 10, title: "Redux-Saga", icon: <SiReduxsaga /> },
+    { id: 11, title: "Redux", icon: <SiRedux /> },
+    { id: 12, title: "Tailwind", icon: <SiTailwindcss /> },
   ];
   const projects = [
     {
@@ -55,6 +58,13 @@ export default function Home() {
       description: "E-commerce for apparel",
       link: "https://puti.vercel.app/",
       icon: <FiShoppingBag className="text-5xl" />,
+    },
+    {
+      id: 3,
+      title: "Flowerized (WIP)",
+      description: "Online store for a flower shop",
+      link: "https://flowerized-staging.herokuapp.com/",
+      icon: <IoFlowerOutline className="text-5xl" />,
     },
   ];
 
