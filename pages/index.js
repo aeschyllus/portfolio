@@ -63,7 +63,7 @@ export default function Home() {
       id: 3,
       title: "Flowerized (WIP)",
       description: "Online store for a flower shop",
-      link: "https://flowerized-staging.herokuapp.com/",
+      link: "https://flowerized-dev.herokuapp.com/",
       icon: <IoFlowerOutline className="text-5xl" />,
     },
   ];
