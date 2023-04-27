@@ -1,11 +1,30 @@
+import { FaVolleyballBall } from "react-icons/fa";
+import { FiShoppingBag } from "react-icons/fi";
 import Container from "../components/Container";
 import Spacer from "../components/Spacer";
 import { HISTORY } from "../constants/history";
 import { PROFILE_LINKS } from "../constants/profileLinks";
-import { PROJECTS } from "../constants/projects";
 import { TOOLS } from "../constants/tools";
 
 export default function Home() {
+  // TODO: Figure out why icon is smaller when put on a separate file
+  //       See constants/projects.js
+  const PROJECTS = [
+    {
+      id: 1,
+      title: "Haikyuu!!",
+      description: "An anime themed web app",
+      link: "https://haikyu.netlify.app/",
+      icon: <FaVolleyballBall className="text-5xl" />,
+    },
+    {
+      id: 2,
+      title: "Puti",
+      description: "E-commerce for apparel",
+      link: "https://puti.vercel.app/",
+      icon: <FiShoppingBag className="text-5xl" />,
+    },
+  ];
 
   return (
     <Container>
@@ -58,7 +77,7 @@ export default function Home() {
               className="border-l border-neutral-500 dark:border-amber-50 p-4"
             >
               <p className="text-xl font-bold">{job.position}</p>
-              <p >{job.company}</p>
+              <p>{job.company}</p>
               <p className="text-sm italic">{job.duration}</p>
             </div>
           ))}
