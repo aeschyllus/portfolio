@@ -1,5 +1,6 @@
 import Container from "../components/Container";
 import Spacer from "../components/Spacer";
+import { HISTORY } from "../constants/history";
 import { PROFILE_LINKS } from "../constants/profileLinks";
 import { PROJECTS } from "../constants/projects";
 import { TOOLS } from "../constants/tools";
@@ -45,6 +46,23 @@ export default function Home() {
           Oh, I use Neovim as my code editor by the way. I recently transitioned
           from using VS Code and I&apos;m never going back.
         </p>
+      </section>
+
+      <section id="history" className="space-y-4">
+        <Spacer />
+        <h2 className="text-2xl font-bold tracking-widest">/history</h2>
+        <div className="space-y-4">
+          {HISTORY.map((job) => (
+            <div
+              key={job.id}
+              className="border-l border-neutral-500 dark:border-amber-50 p-4"
+            >
+              <p className="text-xl font-bold">{job.position}</p>
+              <p >{job.company}</p>
+              <p className="text-sm italic">{job.duration}</p>
+            </div>
+          ))}
+        </div>
       </section>
 
       <section id="tools" className="space-y-4">

@@ -15,8 +15,9 @@ export default function Navbar() {
   const [nav, setNav] = useState(false);
   const navLinks = [
     { id: 1, title: "About", path: "#about" },
-    { id: 2, title: "Tools", path: "#tools" },
-    { id: 3, title: "Projects", path: "#projects" },
+    { id: 2, title: "History", path: "#history" },
+    { id: 3, title: "Tools", path: "#tools" },
+    { id: 4, title: "Projects", path: "#projects" },
   ];
   const profileLinks = [
     {
