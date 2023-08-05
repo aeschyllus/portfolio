@@ -1,5 +1,6 @@
 import { FaVolleyballBall } from "react-icons/fa";
 import { FiShoppingBag } from "react-icons/fi";
+import { MdOutlinePrivacyTip } from "react-icons/md";
 import Container from "../components/Container";
 import Spacer from "../components/Spacer";
 import { HISTORY } from "../constants/history";
@@ -12,13 +13,20 @@ export default function Home() {
   const PROJECTS = [
     {
       id: 1,
+      title: "Samsung Privacy",
+      description: "Samsung's privacy site",
+      link: "https://privacy.samsung.com/",
+      icon: <MdOutlinePrivacyTip className="text-5xl" />,
+    },
+    {
+      id: 2,
       title: "Haikyuu!!",
       description: "An anime themed web app",
       link: "https://haikyu.netlify.app/",
       icon: <FaVolleyballBall className="text-5xl" />,
     },
     {
-      id: 2,
+      id: 3,
       title: "Puti",
       description: "E-commerce for apparel",
       link: "https://puti.vercel.app/",
