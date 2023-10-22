@@ -28,7 +28,10 @@ export default function Home() {
       description: "Samsung's privacy site",
       link: "https://privacy.samsung.com/",
       icon: <MdOutlinePrivacyTip className="text-5xl" />,
-      techs: [<GrReactjs />, <SiRedux />],
+      techs: [
+        { id: 1, icon: <GrReactjs /> },
+        { id: 2, icon: <SiRedux /> },
+      ],
     },
     {
       id: 2,
@@ -36,7 +39,12 @@ export default function Home() {
       description: "Expense tracker",
       link: "https://github.com/aeschyllus/expensetracker-be",
       icon: <GrMoney className="text-5xl" />,
-      techs: [<SiNestjs />, <SiPrisma />, <SiDocker />, <SiPostgresql />],
+      techs: [
+        { id: 1, icon: <SiNestjs /> },
+        { id: 2, icon: <SiPrisma /> },
+        { id: 3, icon: <SiDocker /> },
+        { id: 4, icon: <SiPostgresql /> },
+      ],
     },
     {
       id: 3,
@@ -44,7 +52,10 @@ export default function Home() {
       description: "An anime themed web app",
       link: "https://haikyu.netlify.app/",
       icon: <FaVolleyballBall className="text-5xl" />,
-      techs: [<SiHtml5 />, <SiTailwindcss />],
+      techs: [
+        { id: 1, icon: <SiHtml5 /> },
+        { id: 2, icon: <SiTailwindcss /> },
+      ],
     },
     {
       id: 4,
@@ -52,7 +63,10 @@ export default function Home() {
       description: "E-commerce for apparel",
       link: "https://puti.vercel.app/",
       icon: <FiShoppingBag className="text-5xl" />,
-      techs: [<SiNextdotjs />, <SiTailwindcss />],
+      techs: [
+        { id: 1, icon: <SiNextdotjs /> },
+        { id: 2, icon: <SiTailwindcss /> },
+      ],
     },
   ];
 
@@ -148,9 +162,9 @@ export default function Home() {
                 <small>{project.description}</small>
 
                 <div className="flex items-center gap-1 mt-2">
-                  {project.techs.map((tech, idx) => (
-                    <span key={idx} className="text-lg">
-                      {tech}
+                  {project.techs.map((tech) => (
+                    <span key={tech.id} className="text-lg">
+                      {tech.icon}
                     </span>
                   ))}
                 </div>
