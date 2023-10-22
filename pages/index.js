@@ -1,6 +1,17 @@
 import { FaVolleyballBall } from "react-icons/fa";
 import { FiShoppingBag } from "react-icons/fi";
 import { MdOutlinePrivacyTip } from "react-icons/md";
+import { GrReactjs, GrMoney } from "react-icons/gr";
+import {
+  SiNextdotjs,
+  SiRedux,
+  SiTailwindcss,
+  SiHtml5,
+  SiNestjs,
+  SiPrisma,
+  SiPostgresql,
+  SiDocker,
+} from "react-icons/si";
 import Container from "../components/Container";
 import Spacer from "../components/Spacer";
 import { HISTORY } from "../constants/history";
@@ -17,20 +28,31 @@ export default function Home() {
       description: "Samsung's privacy site",
       link: "https://privacy.samsung.com/",
       icon: <MdOutlinePrivacyTip className="text-5xl" />,
+      techs: [<GrReactjs />, <SiRedux />],
     },
     {
       id: 2,
+      title: "Xpense API (WIP)",
+      description: "Expense tracker",
+      link: "https://github.com/aeschyllus/expensetracker-be",
+      icon: <GrMoney className="text-5xl" />,
+      techs: [<SiNestjs />, <SiPrisma />, <SiDocker />, <SiPostgresql />],
+    },
+    {
+      id: 3,
       title: "Haikyuu!!",
       description: "An anime themed web app",
       link: "https://haikyu.netlify.app/",
       icon: <FaVolleyballBall className="text-5xl" />,
+      techs: [<SiHtml5 />, <SiTailwindcss />],
     },
     {
-      id: 3,
+      id: 4,
       title: "Puti",
       description: "E-commerce for apparel",
       link: "https://puti.vercel.app/",
       icon: <FiShoppingBag className="text-5xl" />,
+      techs: [<SiNextdotjs />, <SiTailwindcss />],
     },
   ];
 
@@ -111,19 +133,29 @@ export default function Home() {
       <section id="projects" className="space-y-4">
         <Spacer />
         <h2 className="text-2xl font-bold tracking-widest">/projects</h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           {PROJECTS.map((project) => (
-            <a
+            <div
               key={project.id}
-              href={project.link}
-              className="flex items-center justify-around border border-neutral-500 dark:border-amber-50 p-4"
+              // href={project.link}
+              className="flex items-center gap-11 justify-center border border-neutral-500 dark:border-amber-50 p-4"
             >
-              {project.icon}
+              <a href={project.link} className="">
+                {project.icon}
+              </a>
               <div>
                 <p className="font-bold text-xl">{project.title}</p>
                 <small>{project.description}</small>
+
+                <div className="flex items-center gap-1 mt-2">
+                  {project.techs.map((tech, idx) => (
+                    <span key={idx} className="text-lg">
+                      {tech}
+                    </span>
+                  ))}
+                </div>
               </div>
-            </a>
+            </div>
           ))}
         </div>
       </section>
