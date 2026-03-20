@@ -107,13 +107,12 @@ export default function Home() {
         <Spacer />
         <h2 className="text-2xl font-bold tracking-widest">/projects</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-          {PROJECTS.map((project) => (
+          {PROJECTS.toReversed().map((project) => (
             <div
               key={project.id}
-              // href={project.link}
               className="flex items-center gap-11 justify-center border border-neutral-500 dark:border-amber-50 p-4"
             >
-              <a href={project.link} className="">
+              <a href={project.link} className="text-5xl">
                 {project.icon}
               </a>
               <div>
