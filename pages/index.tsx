@@ -74,13 +74,13 @@ export default function Home() {
         <Spacer />
         <h2 className="text-2xl font-bold tracking-widest">/history</h2>
         <div className="space-y-4">
-          {HISTORY.map((job) => (
+          {HISTORY.toReversed().map((job) => (
             <div
               key={job.id}
               className="border-l border-neutral-500 dark:border-amber-50 p-4"
             >
-              <p className="text-xl font-bold">{job.position}</p>
-              <p>{job.company}</p>
+              <p className="text-xl font-bold">{job.company}</p>
+              <p>{job.position}</p>
               <p className="text-sm italic">{job.duration}</p>
             </div>
           ))}
