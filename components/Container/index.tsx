@@ -1,7 +1,7 @@
 import Head from "next/head";
 import { useContext } from "react";
-import DarkModeContext from "../../contexts/darkMode";
 import Navbar from "../Navbar";
+import { DarkModeContext } from "../../contexts/darkMode";
 
 export default function Container({ children }) {
   const { dark } = useContext(DarkModeContext);

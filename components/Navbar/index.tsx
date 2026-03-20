@@ -8,7 +8,7 @@ import {
   BsToggleOff,
   BsToggleOn,
 } from "react-icons/bs";
-import DarkModeContext from "../../contexts/darkMode";
+import { DarkModeContext } from "../../contexts/darkMode";
 
 export default function Navbar() {
   const { dark, setDark } = useContext(DarkModeContext);
