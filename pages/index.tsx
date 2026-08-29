@@ -106,6 +106,11 @@ export default function Home() {
       <section id="projects" className="space-y-4">
         <Spacer />
         <h2 className="text-2xl font-bold tracking-widest">/projects</h2>
+        <p>
+          <span className="font-bold italic">TIP: </span>
+          Click or tap the icon to redirect to the project's website or github
+          repository.
+        </p>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           {PROJECTS.toReversed().map((project) => (
             <div
