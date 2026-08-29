@@ -11,7 +11,10 @@ import {
   SiPrisma,
   SiPostgresql,
   SiDocker,
+  SiSqlite,
 } from "react-icons/si";
+import { GiCommercialAirplane } from "react-icons/gi";
+import { FaGolang } from "react-icons/fa6";
 
 export const PROJECTS = [
   {
@@ -38,23 +41,34 @@ export const PROJECTS = [
   },
   {
     id: 3,
-    title: "Xpense API",
-    description: "Expense tracker",
-    link: "https://github.com/aeschyllus/expensetracker-be",
+    title: "Nori (API)",
+    description: "Personal finance API",
+    link: "https://github.com/aeschyllus/nori",
     icon: <GrMoney />,
     techs: [
-      { id: 1, icon: <SiNestjs /> },
-      { id: 2, icon: <SiPrisma /> },
-      { id: 3, icon: <SiDocker /> },
-      { id: 4, icon: <SiPostgresql /> },
+      { id: 1, icon: <FaGolang /> },
+      { id: 2, icon: <SiSqlite /> },
     ],
   },
   {
     id: 4,
     title: "Samsung Privacy",
-    description: "Samsung's privacy site",
+    description:
+      "Samsung’s privacy platform for managing user privacy preferences, data permissions, and privacy-related services.",
     link: "https://privacy.samsung.com/",
     icon: <MdOutlinePrivacyTip />,
+    techs: [
+      { id: 1, icon: <GrReactjs /> },
+      { id: 2, icon: <SiRedux /> },
+    ],
+  },
+  {
+    id: 5,
+    title: "Oman Air",
+    description:
+      "Oman Air’s official airline platform for flight booking, trip management, check-in, and travel services.",
+    link: "https://wwww.omanair.com/",
+    icon: <GiCommercialAirplane />,
     techs: [
       { id: 1, icon: <GrReactjs /> },
       { id: 2, icon: <SiRedux /> },
